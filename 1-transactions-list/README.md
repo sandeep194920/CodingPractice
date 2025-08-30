@@ -1,6 +1,6 @@
 `Asked in first round at a company`
 
-Approximate time - 30 mins
+`Approx time needed - 30 minutes`
 
 ## 📝 Transaction List React Challenge
 
