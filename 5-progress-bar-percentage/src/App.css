@@ -1,0 +1,67 @@
+/* I've written these styles  directly inside tailwind. Look at App.tsx
+
+Also, look that, using [] inside tailwind I could use directly css properties inside tailwind
+For example, I've done this in  [grid-template-rows:repeat(3,4rem)] [grid-template-columns:repeat(3,4rem)] 
+
+<article className="grid [grid-template-rows:repeat(3,4rem)] [grid-template-columns:repeat(3,4rem)] border border-gray-400 w-fit m-auto mt-20">
+
+*/
+
+:root {
+  --board-border: 1px solid gray;
+}
+
+/* CSSGridBoard styles */
+.board {
+  display: grid;
+  grid-template-rows: repeat(3, 4rem);
+  grid-template-columns: repeat(3, 4rem);
+  margin: 0 auto;
+  width: fit-content;
+  border: 1px solid grey;
+}
+
+.board__cell {
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+  font-size: 1.5rem;
+  aspect-ratio: 1/1;
+}
+
+.board__cell:nth-child(3n) {
+  border-right: none;
+}
+
+.board__cell:nth-child(n + 7) {
+  border-bottom: none;
+}
+
+/* CSSFlexBoard styles */
+.board-flex {
+  border: var(--board-border);
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.board-flex__row {
+  display: flex;
+}
+
+.board-flex__cell {
+  width: 4rem;
+  /* height: 4rem; */
+  aspect-ratio: 1/1;
+  border-right: var(--board-border);
+  border-bottom: var(--board-border);
+  font-size: 1.5rem;
+}
+
+.board-flex__cell:nth-child(3n) {
+  border-right: none;
+}
+
+.board-flex__row:last-child .board-flex__cell {
+  border-bottom: none;
+}

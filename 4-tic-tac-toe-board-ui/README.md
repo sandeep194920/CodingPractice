@@ -1,5 +1,3 @@
-`Asked in first round at a company`
-
 `Approx time needed - 15 minutes for generating each board - grid and flex`
 
 ## 📝 Tic Tac Toe board (UI only)
