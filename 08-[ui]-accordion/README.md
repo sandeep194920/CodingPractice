@@ -129,7 +129,7 @@ const toggleAccordion = (value: string) => {
 };
 ```
 
-**3. Hide the div or any HTML semantically**
+###### 3. Hide the div or any HTML semantically
 
 Till now I used to do this
 
