@@ -28,7 +28,10 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({
       className="modal__backdrop"
       onClick={onClose}
     >
-      <article className="modal__content">
+      <article
+        onClick={(e) => e.stopPropagation()} // prevent bubbling (Look at readme explanation for this)
+        className="modal__content"
+      >
         <h1 id={titleId}>{title}</h1>
         <span id={contentId}>{children}</span>
       </article>

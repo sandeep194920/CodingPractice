@@ -37,6 +37,9 @@ So:
 
 We learnt about the hidden attribute in [Accordion question](https://github.com/sandeep194920/CodingPractice/tree/main/08-%5Bui%5D-accordion#2-good-accordion)
 
+- How to prevent closing the dialog onClick on anywhere inside the dialog (except close button)? We can use `onClick={(e) => e.stopPropagation()}` inside the dialog that prevents event bubbling.
+  - This is necessary because the backdrop also has onClick close, and dialog also has the close button. When dialog's close button is clicked, it propogates upto the backdrop allowing it to close the modal when we click anything inside the backdrop. This happens due to event bubbling, and we can prevent it by adding `onClick={(e) => e.stopPropagation()}` inside the dialog.
+
 ##### Things learnt from [Modal dialog II](https://www.greatfrontend.com/questions/user-interface/modal-dialog-ii?practice=practice&tab=coding)
 
 - aria-modal
