@@ -338,7 +338,7 @@ This would actually give you back the element if it has `data-accordion-value` o
 **2. Can you use any random attribute?**
 
 No, not really.
-HTML only allows specific attributes by spec. Random attributes (like <button foo="bar">) are invalid HTML.
+HTML only allows specific attributes by spec. Random attributes (like `<button foo="bar">`) are invalid HTML.
 To safely store custom data, you must use data-\*:
 
 ```tsx
@@ -352,8 +352,7 @@ console.log(el?.dataset.myCustomInfo); // "123"
 
 ✅ Rule of Thumb
 
-Any attribute that doesn’t exist in HTML spec → prefix with data-.
-Use camelCase when accessing via dataset (data-accordion-value → dataset.accordionValue).
+Prefix `data-` on any HTML tag like h1, h2, div and so on. Then use camelCase when accessing via dataset (`data-accordion-value` → `dataset.accordionValue`).
 
 **The other thing to note is, tab and shift+tab works out-of-the-box in any browser and we need not code them. The only keys we need to take care of are ArrowUp, ArrowDown, Home, End**
 
