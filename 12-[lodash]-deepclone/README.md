@@ -2,7 +2,7 @@
 
 `Approx time - 15 minutes`
 
-Expectation
+**Expectation**
 
 ```ts
 const obj1 = { user: { role: "admin" } };
