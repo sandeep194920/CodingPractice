@@ -63,3 +63,12 @@ The goal of this repo is to:
   - How to avoid `Object.prototype.toString.call()` to check the type and stick to traditional approach?
 
 ---
+
+##### 14. Difference
+
+- `SameValueZero`
+- Check for sparse array element
+- `i in object` vs `Object.hasOwn(object, i)` -> Why the latter one is better
+- `array.filter(Boolean)` is used to remove sparse elements + falsy values. But `array.filter((_,i) => i in array)` can remove only sparse elements (sparse elements = elements where key itself doesn't exist)
+
+---
