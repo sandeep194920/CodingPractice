@@ -1,0 +1,34 @@
+*:focus {
+  outline: 2px solid red;
+  outline-offset: 2px; /*gap between border and the border color red*/
+}
+
+.modal__backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__content {
+  width: 50%;
+  height: 50%;
+  z-index: 11;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  overflow: scroll;
+}
+
+.modal-dialog {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}

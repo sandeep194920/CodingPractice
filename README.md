@@ -34,13 +34,37 @@ The goal of this repo is to:
 
 ---
 
-##### 11. Deep Clone
+##### 11. Modal Dialog IV
+
+- How to focus on first element in modal-dialog when it mounts?
+
+- How to trap the focus within the Modal dialog on tab/shift tab presses?
+
+- How to focus back on the element that triggered the modal mounting after the modal unmounts?
+
+- What is a tabbable element?
+- Meaning of `tabIndex = 0`, tabIndex > and < than 0
+- How to get all tabbable elements within a container?
+
+- How to type a ref? `(RefObject<HTMLElement | null>)`
+- Why we need to check if the element is instance of `HTMLElement` (returned from NodeList) before doing focus() on it?
+
+- UseEffect gotchas:
+
+  - `useRef` value change might not trigger the DOM so be careful with early returns
+  - DOM not ready yet, so a few things must be defined inside the useEffect rather than outside.
+
+- Why do we need `ring` (from tailwind) when `outline` exists? What's the difference b/w a border, outline and a ring?
+
+---
+
+##### 12. Deep Clone
 
 1. What are JSON serializable values
 
 ---
 
-##### 12. Deep Equal
+##### 13. Deep Equal
 
 - What is circular reference in object
 
