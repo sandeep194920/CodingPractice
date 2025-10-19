@@ -66,3 +66,9 @@ const initBoard = [
 - It tests how well we can implement 3x3 board using a flex box (felt a little challenging as I initially missed `display:flex` property on `.board-flex__row` ).
 
 - It tests how well we can use `Array.from` or whatever like `Array.fill` to dynamically generate cells.
+
+#### Important - There's also one way to remove extra borders without actually targeting nth child or last row
+
+That is to do it using margins which I didn't know earlier. I learnt after seeing this tic-tac-toe game from [react-docs](https://react.dev/learn/tutorial-tic-tac-toe)
+
+Do `margin-right:-1px` and `margin-top:1px` as shown in `15-[ui]-tic-tac-toe-react-docs` question
