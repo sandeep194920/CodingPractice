@@ -96,3 +96,10 @@ The goal of this repo is to:
 - `array.filter(Boolean)` is used to remove sparse elements + falsy values. But `array.filter((_,i) => i in array)` can remove only sparse elements (sparse elements = elements where key itself doesn't exist)
 
 ---
+
+##### 16. Character frequency aggregate
+
+- Asked at IBM
+- Involves map datastructure - get from map
+
+---
