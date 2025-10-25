@@ -103,3 +103,12 @@ The goal of this repo is to:
 - Involves map datastructure - get from map
 
 ---
+
+##### 17. Number base conversion
+
+- Generally asked at IBM first round
+- Decimal to binary
+- Binary to decimal
+- Decimal to octal
+- Octal to decimal
+- Up for any conversion where decimal isn't involved
