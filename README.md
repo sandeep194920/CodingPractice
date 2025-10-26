@@ -112,3 +112,24 @@ The goal of this repo is to:
 - Decimal to octal
 - Octal to decimal
 - Up for any conversion where decimal isn't involved
+
+---
+
+##### 18. Fibinocci
+
+- Find fibinocci number through recursion
+- Find fibinocci number through loops
+- Optimize the above
+- Function to generate fibinocci series (not just return the number but return back the whole series)
+- Function to generate fibinocci tree that prints the above generated sequence into number of rows the user wants
+
+---
+
+##### 19. Prime number or not
+
+- Shows 3 ways to check:
+  - non-optimized
+  - optimized (check until sqrt)
+  - more optimized (same as above optimized check but include a check to remove even numbers as well except for 2)
+
+---
