@@ -138,3 +138,10 @@ The goal of this repo is to:
 
 - You need to _remember_ the Euclidian alogorithm so it will always be fresh in mind
 - What is LCM and how's LCM related to GCD?
+
+---
+
+##### 21. Reverse a number - Also check for palindrome easily
+
+- See how to mathematically reverse a number, not converting into a string
+- You can then check by comparing the number and reversed to see if they are same to conclude if it is palindrome
