@@ -133,3 +133,8 @@ The goal of this repo is to:
   - more optimized (same as above optimized check but include a check to remove even numbers as well except for 2)
 
 ---
+
+##### 20. HCF/GCD and LCM (You have to remember the formula)
+
+- You need to _remember_ the Euclidian alogorithm so it will always be fresh in mind
+- What is LCM and how's LCM related to GCD?
