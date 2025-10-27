@@ -145,3 +145,10 @@ The goal of this repo is to:
 
 - See how to mathematically reverse a number, not converting into a string
 - You can then check by comparing the number and reversed to see if they are same to conclude if it is palindrome
+
+---
+
+##### 22. Missing words
+
+- Asked in IBM
+- Look at the [Missing words readme](https://github.com/sandeep194920/CodingPractice/tree/main/22-%5Bstring%5D-missing-words) to understand the way to approach manually first. _This is the key to solving any problem_
