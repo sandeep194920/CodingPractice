@@ -12,7 +12,7 @@ const deepEqual = (valueA: unknown, valueB: unknown): boolean => {
 
   if (typeA === typeB && shouldDeepCompare(typeA) && shouldDeepCompare(typeB)) {
     // or(and) shouldDeepCompare(typeB)
-    const entriesA = Object.entries(valueA as Array<unknown> | Object);
+    const entriesA = Object.entries(valueA as Array<unknown> | Object); //  Array<unknown> | Object -> we are saying that entries can be either type. Both objects and arrays will then behave as Array after converting it with Object.entries, so we should be fine.
     const entriesB = Object.entries(valueB as Array<unknown> | Object);
 
     if (entriesA.length !== entriesB.length) return false;

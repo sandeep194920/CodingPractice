@@ -23,6 +23,14 @@ deepEqual([{ id: "1" }], [{ id: "2" }]); // false
 
 ### Things learnt
 
+- What is a cicular reference?
+- Difference b/w `Object.is` and `===`
+- What is a NaN? What is typeof NaN?
+- Arrays are Objects indeed. So you should know that internally arrays can still be used as objects.
+- How to avoid `Object.prototype.toString.call()` to check the type and stick to traditional approach?
+
+--
+
 #### 1. What is a cicular reference?
 
 An object with a circular reference is when the object directly or indirectly refers back to itself.
@@ -65,7 +73,7 @@ _You can assume there are only JSON-serializable values (numbers, strings, boole
 
 ---
 
-#### 2. What is a cicular reference?
+#### 2. Difference b/w `Object.is` and `===`
 
 **Differences**
 
@@ -83,7 +91,7 @@ Object.is(NaN, NaN); // true ✅
 Object.is(+0, -0); // false ✅
 ```
 
-Object.is respects the sign bit of zero (important in some numeric edge cases like division).
+`Object.is` respects the sign bit of zero (important in some numeric edge cases like division).
 
 **Otherwise identical**
 For all other values, === and Object.is behave the same.
