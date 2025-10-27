@@ -1,4 +1,4 @@
-## Lodash - Curry
+## Lodash - Debounce
 
 `Approx time needed - 20 minutes`
 
