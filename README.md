@@ -161,3 +161,7 @@ The goal of this repo is to:
 - _3 ways_ to find duplicates in the array
 
 ---
+
+##### 23. Find missing number in an array sequence
+
+---
