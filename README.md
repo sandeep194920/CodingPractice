@@ -165,3 +165,10 @@ The goal of this repo is to:
 ##### 23. Find missing number in an array sequence
 
 ---
+
+##### 24. File Explorer
+
+- Recursive way to think
+- `sort` and `localeCompare`
+
+---
