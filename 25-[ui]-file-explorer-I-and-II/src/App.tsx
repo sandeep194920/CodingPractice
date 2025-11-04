@@ -68,5 +68,9 @@ interface FileExplorer {
 }
 
 const FileExplorer: FC<FileExplorer> = ({ fileList }) => {
-  return <FileList fileList={fileList} level={1} />;
+  return (
+    <div aria-label="Files Explorer" role="tree">
+      <FileList fileList={fileList} level={1} />
+    </div>
+  );
 };

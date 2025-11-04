@@ -168,7 +168,10 @@ The goal of this repo is to:
 
 ##### 24. File Explorer
 
+**File Explorer I**
+
 - Recursive way to think
 - `sort` and `localeCompare`
+- ARIA labels
 
 ---
