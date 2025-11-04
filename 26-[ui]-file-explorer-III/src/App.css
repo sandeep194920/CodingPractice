@@ -1,0 +1,21 @@
+.file-list {
+  list-style: none;
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.file {
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  display: flex;
+  gap: 0.2rem;
+  padding: 4px 2px;
+}
+
+.file-type-dir {
+  font-weight: bold;
+  cursor: pointer;
+}
