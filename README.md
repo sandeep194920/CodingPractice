@@ -175,3 +175,10 @@ The goal of this repo is to:
 - ARIA labels
 
 ---
+
+##### 27. Data Table I
+
+- `border-collapse:collapse` prop on table to get rid of double border
+- `flex` vs `inline-flex`
+
+---
