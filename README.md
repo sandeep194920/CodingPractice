@@ -182,3 +182,10 @@ The goal of this repo is to:
 - `flex` vs `inline-flex`
 
 ---
+
+##### 28. Data Table II
+
+- Sort table data in ascending and descending orders
+- Why we do `localCompare` to sort strings and not `>` or `<`
+
+---
