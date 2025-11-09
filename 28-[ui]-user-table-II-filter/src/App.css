@@ -1,0 +1,39 @@
+table {
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border-bottom: 1px solid black;
+  padding: 1rem;
+  text-align: start;
+  vertical-align: baseline;
+}
+
+.pagination {
+  display: flex;
+  gap: 12px;
+}
+
+.pages {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.age-input {
+  display: inline-flex;
+  gap: 16px;
+}
+
+.age-input input {
+  width: 4rem;
+}
+
+.table-head {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
