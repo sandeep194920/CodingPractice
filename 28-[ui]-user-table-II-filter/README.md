@@ -1,6 +1,6 @@
-# Data table I
+# Data table II - Filter
 
-`Approx time - 30m`
+`Approx time - 20m`
 
 This is a continuation of [Data Table I](https://github.com/sandeep194920/CodingPractice/tree/main/27-%5Bui%5D-data-table-I). So first complete that.
 

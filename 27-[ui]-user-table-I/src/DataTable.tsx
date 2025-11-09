@@ -30,8 +30,8 @@ const paginate = (data: User[], page: number, pageSize: number) => {
 };
 
 const DataTable: FC<DataTableProps> = ({ users }) => {
-  const [page, setPage] = useState(4);
-  const [pageSize, setPageSize] = useState(10);
+  const [page, setPage] = useState(1);
+  const [pageSize, setPageSize] = useState(5);
 
   const { totalPages, pageData } = paginate(users, page, pageSize);
 

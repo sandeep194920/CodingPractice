@@ -1,0 +1,29 @@
+table {
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border-bottom: 1px solid black;
+  padding: 1rem;
+  text-align: start;
+}
+
+th button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-weight: bold;
+  padding: 0;
+}
+
+.pagination {
+  display: flex;
+  gap: 12px;
+}
+
+.pages {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}

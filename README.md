@@ -189,3 +189,8 @@ The goal of this repo is to:
 - Why we do `localCompare` to sort strings and not `>` or `<`
 
 ---
+
+##### 29. Data Table III
+
+- Avoid using `FC` with generics `T`
+- `keyof T & string`
