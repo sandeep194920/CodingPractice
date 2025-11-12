@@ -194,3 +194,15 @@ The goal of this repo is to:
 
 - Avoid using `FC` with generics `T`
 - `keyof T & string`
+
+---
+
+##### 30. TODO List
+
+- How to create unique `key` for a list? How to also make it secure?
+- How to submit on enter? This is basically by wrapping `input` and submit `button` inside the `form` to get this behaviour?
+- How to add delete window confimation before deleting a task?
+- QUIZ - What if you want to re-render only the items that have changed to the UI? -> **React Memo**
+- `aria-live` for live updates - Important where something updates based on actions. For example, in todo list, the render area changes when a todo is added, deleted and so on.
+
+---

@@ -1,0 +1,22 @@
+.todo-container {
+  margin-left: 2rem;
+}
+
+.todo-form {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+  padding-left: 16px;
+}
+
+.task-item {
+  display: inline-flex;
+  gap: 1rem;
+}
