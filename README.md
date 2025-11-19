@@ -206,3 +206,29 @@ The goal of this repo is to:
 - `aria-live` for live updates - Important where something updates based on actions. For example, in todo list, the render area changes when a todo is added, deleted and so on.
 
 ---
+
+##### 31. Sort elements by frequency
+
+- Bucket sort
+- Sort - `sort()` doesn't work on numbers. We need to do `sort(a,b => a-b)`
+- How do you do
+
+```ts
+{
+  5: 2,
+  4: 2,
+  6: 1,
+  1: 1
+}
+
+// Or a Map => {5 => 2, 4 => 2, 6 => 1, 1 => 1} -> This represents (first value as number and second value as times)
+
+// to get -> in ascending order where high frequency should come first but in ascending order
+
+[4, 4, 5, 5, 1, 6]
+
+```
+
+- **Very important to learn this so you master the sorting**
+
+---
