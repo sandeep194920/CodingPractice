@@ -1,0 +1,10 @@
+.jobs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.job-item {
+  background-color: rgb(217, 217, 217);
+  padding: 0.1rem 0.7rem 1rem 0.7rem;
+}

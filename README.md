@@ -232,3 +232,17 @@ The goal of this repo is to:
 - **Very important to learn this so you master the sorting**
 
 ---
+
+##### 32. Job Board
+
+- Why GreatFrontEnd solution is not perfect here?
+
+- How to call APIs, and also use a ref to check if component exists before updating the state
+
+- What is `isMounted` and why we need to use that?
+
+- React Strict mode. Why `setState(normal array)` is **NOT** better than an updater function like `setState(prev => ...)` (Greatfrontend does `setState(normal array)` which is not good)?
+
+- How to properly handle duplicate results caused by react strict mode? Why the duplicates are caused even after updating the state conditionally by checking if `isMounted.current === true`?
+
+---
