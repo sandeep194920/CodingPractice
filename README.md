@@ -246,3 +246,10 @@ The goal of this repo is to:
 - How to properly handle duplicate results caused by react strict mode? Why the duplicates are caused even after updating the state conditionally by checking if `isMounted.current === true`?
 
 ---
+
+##### 33. Traffic Light
+
+- State machine
+- SetTimeout and cleanup function inside useEffect
+
+---
