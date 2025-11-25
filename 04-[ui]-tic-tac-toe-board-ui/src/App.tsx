@@ -41,6 +41,7 @@ const CSSGridBoard = ({ board }: { board: string[][] }) => {
       <article className="board">
         {board.map((row, rowIndex) => {
           return row.map((cell, colIndex) => (
+            // You could just do key={colIndex} as each row is different map so colIndex will be unique
             <button className="board__cell" key={`${rowIndex}${colIndex}`}>
               {cell}
             </button>
