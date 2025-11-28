@@ -1,0 +1,32 @@
+.container {
+  margin: 10rem;
+  display: flex;
+  gap: 5rem;
+}
+
+/* GRID Board */
+.grid-board {
+  display: grid;
+  grid-template-columns: repeat(3, 4rem);
+  grid-template-rows: repeat(3, 4rem);
+  width: fit-content;
+}
+
+.grid-board button {
+  background-color: transparent;
+  border: 1px solid gray;
+  font-size: 1.5rem;
+  margin-bottom: -1px;
+  margin-right: -1px;
+  cursor: pointer;
+  /*min function helps adapt font size based on available width. For small screens 48px is the fallback, and for large screens 2% of view port*/
+  /* font-size: min(
+    48px,
+    2vw
+  );  */
+}
+
+.grid-board button:disabled {
+  color: black;
+  cursor: not-allowed;
+}

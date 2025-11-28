@@ -20,6 +20,14 @@ The goal of this repo is to:
 
 ### Index - Quick lookup on 'Things learnt' in each question
 
+##### 0. Typescript basics
+
+- `:` vs `satisfies`
+- `type` vs `interface` - When to use what.
+- `Readonly` vs `as const`
+
+---
+
 ##### 1. Aggregate list (Transactions)
 
 1. Use of `span` in "Render format: <Customer Name>: <Amount>".
@@ -251,5 +259,15 @@ The goal of this repo is to:
 
 - State machine
 - SetTimeout and cleanup function inside useEffect
+
+---
+
+##### 34. Tic-Tac-Toe Winner logic
+
+- How to write winner logic for a 3x3 fixed board using 1D array
+- How to use a matrix (2D array) for NxN board
+- How to use 1D array for NxM or NxN boards
+
+**In [official Tic-Tac-Toe II solution](https://www.greatfrontend.com/questions/user-interface/tic-tac-toe-ii), we use the last one, but their solution is little cluncky. Ours is better**
 
 ---

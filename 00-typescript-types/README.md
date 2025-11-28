@@ -33,3 +33,29 @@ Use `as const` when you need to infer type (when you hover on arr). It gives you
 Use `Readonly` when you don't care about narrowed type like `[2,3,4,5]` and you're ok with `number[]`
 
 ---
+
+##### 3. `:` vs `satisfies`
+
+[Refer to this chat](https://claude.ai/share/e3530292-5200-4c11-b8cf-a6ade4551b10)
+
+```ts
+You absolutely can do:
+typescriptconst homeRoute: Route = { path: "/home", method: "GET" };
+This is perfectly valid! But now homeRoute.method has type "GET" | "POST" (the wider union type).
+The ONLY reason to choose satisfies over : is:
+Do you need the precise/literal types later?
+typescripttype Route = { path: string; method: "GET" | "POST" };
+
+// With :
+const homeRoute: Route = { path: "/home", method: "GET" };
+homeRoute.method // type: "GET" | "POST" 😐
+
+// With satisfies
+const homeRoute = { path: "/home", method: "GET" } satisfies Route;
+homeRoute.method // type: "GET" 🎯
+
+// Why does this matter?
+function handleGet(route: { method: "GET" }) { /* ... */ }
+
+handleGet(homeRoute); // ❌ with :, ✅ with satisfies
+```
