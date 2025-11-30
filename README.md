@@ -286,3 +286,15 @@ The goal of this repo is to:
 - How to copy (Deep copy during state update) the matrix/2D array.
 
 ---
+
+##### 38. Image Carousel
+
+- When to do `align-items:center` vs `left:50%; transform:translate(-50%)`? -> The later one is done for absolutely positioned elements.
+
+- How to rotate b/w pages. From last page to first and then first to last? By doing
+
+```ts
+add`(prev - or + 1 totalImages)  % totalImages`;
+```
+
+**So add `totalImages) % totalImages`**
