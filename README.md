@@ -271,3 +271,18 @@ The goal of this repo is to:
 **In [official Tic-Tac-Toe II solution](https://www.greatfrontend.com/questions/user-interface/tic-tac-toe-ii), we use the last one, but their solution is little cluncky. Ours is better**
 
 ---
+
+##### 37. Connect four
+
+- Steps to do this game - How to divide the game (Where to start)?
+
+- To determine winner using Delta pattern (same pattern applied to all 4 sides - row, col, left diag, right diag) to find the winner.
+
+  - This pattern can be applied to most of 2D games including Tic-Tac-Toe.
+
+- How to show some element on hover on screen?
+- `onMouseEnter` and `onMouseLeave`
+
+- How to copy (Deep copy during state update) the matrix/2D array.
+
+---
