@@ -304,7 +304,68 @@ add`(prev - or + 1 totalImages)  % totalImages`;
 ##### 39. Image Carousel 2 (smooth transition from one image to next)
 
 - How to continue from image carousel 1.
-- How to translateX (move) images with anima**tion** (transi**tion**).
+- How to translateX (move) images with **animation** (**transition**).
 - Hide other images by doing `overflow:hidden` on `image-carousel` container.
+- `onTransitionEnd` - to detect when CSS transition completes
+
+**Key Learnings:**
+
+- **React render phases:** Trigger → Render → Commit → useEffect runs
+
+  - `ref.current` is only available after commit phase
+  - That's why we can safely access it in `useEffect`
+
+- **Why we need `isTransitioning` state:**
+
+  - Prevents transition during window resize (only transition on button clicks)
+  - Apply transition class conditionally to `image-carousel__row` element
+  - Disable buttons during transition to prevent rapid clicks
+
+- **Window resize doesn't trigger React re-render by default:**
+
+  - CSS recalculates automatically (`min(600px, 100vw)`)
+  - But JavaScript state (`imageWidth`) stays stale
+  - Need resize listener to sync browser state → React state via `setState`
+
+- **Better alternative: ResizeObserver**
+
+  - Watches specific element, not entire window
+  - Automatically fires on initial observation (no manual initial call needed)
+  - Only fires when the carousel element actually resizes
+  - More efficient than `window.addEventListener('resize')`
+
+- **Why `width: 100%` on images is better than `min(600px, 100vw)`:**
+
+  - Single source of truth (only container defines width logic)
+  - Images automatically inherit from parent
+  - Changing container width doesn't require updating image styles
+
+- **Common mistake:** Never use `useEffect` just to set initial state without external system synchronization
+
+```tsx
+// ❌ BAD - causes cascading renders
+const [state, setState] = useState(false);
+useEffect(() => {
+  setState(true); // No external system, just setting state
+}, []);
+
+// ✅ GOOD - synchronizing with external system (DOM measurement)
+useEffect(() => {
+  function updateWidth() {
+    setImageWidth(ref.current?.getBoundingClientRect().width ?? 0);
+  }
+  updateWidth(); // Initial + window resize subscription
+  window.addEventListener("resize", updateWidth);
+  return () => window.removeEventListener("resize", updateWidth);
+}, []);
+```
+
+- **`getBoundingClientRect()` returns rendered size including padding and border**
+
+  - Returns precise floating-point numbers
+  - Position is relative to viewport (not document)
+  - Use this for dynamic measurements
+
+- **Debug tip:** Add `border: 5px solid red` to images to visualize actual bounds and catch sizing issues
 
 ---

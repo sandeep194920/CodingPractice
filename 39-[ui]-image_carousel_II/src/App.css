@@ -26,11 +26,17 @@
 /*image-carousel II related*/
 .image-carousel__row {
   display: flex;
+}
+
+.image-carousel__transitioning {
   transition: transform 0.5s linear; /*transform will be added in ImageCarousel.tsx as it should be calculated, not hardcoded */
 }
 
 .image-carousel__img {
   object-fit: contain;
+  width: 100%;
+  height: 100%;
+  border: 5px solid red; /* Temporary: see actual image bounds - this helps you properly visualize images */
 }
 
 .image-carousel__button {
