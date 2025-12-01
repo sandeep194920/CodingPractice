@@ -298,3 +298,13 @@ add`(prev - or + 1 totalImages)  % totalImages`;
 ```
 
 **So add `totalImages) % totalImages`**
+
+---
+
+##### 39. Image Carousel 2 (smooth transition from one image to next)
+
+- How to continue from image carousel 1.
+- How to translateX (move) images with anima**tion** (transi**tion**).
+- Hide other images by doing `overflow:hidden` on `image-carousel` container.
+
+---

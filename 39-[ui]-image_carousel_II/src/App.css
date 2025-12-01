@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  /* margin:0 is very important  */
+  margin: 0;
+}
+
+.wrapper {
+  background-color: rgb(244, 244, 242);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.image-carousel {
+  --size: 40px;
+  position: relative;
+  width: min(600px, 100vw);
+  height: 400px;
+  /*image-carousel II related*/
+  overflow: hidden; /*this is required because we need to see only image in current view*/
+}
+
+/*image-carousel II related*/
+.image-carousel__row {
+  display: flex;
+  transition: transform 0.5s linear; /*transform will be added in ImageCarousel.tsx as it should be calculated, not hardcoded */
+}
+
+.image-carousel__img {
+  object-fit: contain;
+}
+
+.image-carousel__button {
+  position: absolute;
+  background-color: black;
+  border: transparent;
+  flex-shrink: 0;
+  width: var(--size);
+  aspect-ratio: 1/1;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  color: white;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.image-carousel__button__prev {
+  left: 10px;
+}
+
+.image-carousel__button__next {
+  right: 10px;
+}
+
+.image-carousel__pages {
+  display: flex;
+  gap: 0.25rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+}
+
+.image-carousel__pages__button {
+  width: 10px;
+  aspect-ratio: 1/1;
+  background-color: gray;
+  opacity: 0.7;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.image-carousel__pages__button__active {
+  background-color: white;
+}
