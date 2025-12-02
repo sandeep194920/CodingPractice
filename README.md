@@ -369,3 +369,11 @@ useEffect(() => {
 - **Debug tip:** Add `border: 5px solid red` to images to visualize actual bounds and catch sizing issues
 
 ---
+
+##### 40. Image Carousel 3 (Performance optimization)
+
+- What is `requestAnimationFrame` - How it works? Especially at which point the Browser paints?
+
+- How to optimize to have a single image and then render another image to screen + animation when "Next" or "Previous" button is clicked?
+
+---
