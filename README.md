@@ -377,3 +377,11 @@ useEffect(() => {
 - How to optimize to have a single image and then render another image to screen + animation when "Next" or "Previous" button is clicked?
 
 ---
+
+##### 41. Transfer List Logic
+
+- Use a map if you want to delete items from the list **_(This is very important to remember for you to decide when to use Map Vs Array)_**.
+- Use an array if you don't modify the list
+- `forEach` signature will have `(val, key)`. You can't use `map` or `filter` but can use `forEach` on Map
+
+---
