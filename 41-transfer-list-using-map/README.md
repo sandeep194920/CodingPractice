@@ -1,5 +1,7 @@
 ## Transfer List
 
+`Approx time - 10 min`
+
 A pre-requisite to solve [Transfer List UI question](https://www.greatfrontend.com/questions/user-interface/transfer-list/react?framework=react&tab=coding)
 
 This problem teaches you how to

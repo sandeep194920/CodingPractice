@@ -383,5 +383,15 @@ useEffect(() => {
 - Use a map if you want to delete items from the list **_(This is very important to remember for you to decide when to use Map Vs Array)_**.
 - Use an array if you don't modify the list
 - `forEach` signature will have `(val, key)`. You can't use `map` or `filter` but can use `forEach` on Map
+- `map.entries()` is very much same as doing `map itself`
+- `map.forEach((val,key) => )` is different from arrays in terms of parameters
+
+---
+
+##### 42. Transfer List
+
+- `map.entries()` is very much same as doing `map itself`
+- If you see this pattern where a component has checkbox + label, it's better to make it a component because we need to use `useId()` to get the unique Id. This will be a clean approach.
+- `map.forEach((val,key) => )` is different from arrays in terms of parameters
 
 ---

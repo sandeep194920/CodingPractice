@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.transfer-list__container {
+  display: flex;
+  margin: 10rem;
+  width: fit-content;
+  gap: 3rem;
+  border: 1px solid black;
+}
+
+.transfer-list__items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border: 1px solid black;
+  padding: 2rem;
+  margin: -1px;
+  min-width: 200px;
+}
+
+.transfer-list__items li {
+  display: flex;
+  gap: 1rem;
+}
+
+.transfer-list__items li input[type="checkbox"],
+.transfer-list__items li label {
+  cursor: pointer;
+}
+
+.transfer-list__controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: -1px;
+  margin-bottom: -1px;
+}
+
+.transfer-list__controls button {
+  cursor: pointer;
+}
