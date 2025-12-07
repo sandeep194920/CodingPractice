@@ -1,0 +1,38 @@
+.container {
+  margin: 4rem;
+}
+
+.db__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 20%;
+}
+
+input {
+  display: block;
+  width: fit-content;
+}
+
+.middle-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.select {
+  flex-shrink: 0;
+  min-width: 10rem;
+}
+
+.name__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}

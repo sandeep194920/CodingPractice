@@ -395,3 +395,24 @@ useEffect(() => {
 - `map.forEach((val,key) => )` is different from arrays in terms of parameters
 
 ---
+
+##### 43. Users Database
+
+- Select option
+- Multiple buttons for form submissions - button `name` and `value` prop pair usage.
+
+```ts
+const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+e.preventDefault()
+const formData = new FormData(
+  e.currentTarget,
+  (e.nativeEvent as SubmitEvent).submitter
+);
+
+const intent = formData.get("intent");
+
+```
+
+- How to deal with a problem with `select` where an `option` still remains selected after clicking cancel button.
+
+---
