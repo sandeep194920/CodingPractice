@@ -416,3 +416,9 @@ const intent = formData.get("intent");
 - How to deal with a problem with `select` where an `option` still remains selected after clicking cancel button.
 
 ---
+
+##### 44. Format Time
+
+- Learn how to format time into hours, minutes, seconds and milliseconds when input is milliseconds
+
+---
