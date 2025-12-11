@@ -1,0 +1,67 @@
+.wrapper {
+  padding: 10rem;
+}
+
+.clock {
+  --digit-width: 5rem;
+  --digit-height: 5rem;
+  --digit-color: #fff;
+  --digit-transparent: transparent;
+  --digit-thickness: 20px;
+
+  width: fit-content;
+  background-color: black;
+  border: var(--digit-thickness) solid rgb(200, 199, 199);
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.digit-square {
+  width: var(--digit-width);
+  height: var(--digit-height);
+  border: 16px solid var(--digit-transparent);
+}
+
+.digit-square-top-half {
+  border-bottom-width: calc(var(--digit-thickness) / 2);
+}
+
+.digit-square-bottom-half {
+  border-top-width: calc(var(--digit-thickness) / 2);
+}
+
+.digit-square-top {
+  border-top-color: var(--digit-color);
+}
+
+.digit-square-right {
+  border-right-color: var(--digit-color);
+}
+
+.digit-square-left {
+  border-left-color: var(--digit-color);
+}
+
+.digit-square-bottom {
+  border-bottom-color: var(--digit-color);
+}
+
+/* For "1", we have a strange space at left due to not filling left side at all, so let's move "1" a little to center */
+/* COMPLETELY OPTIONAL - NOT PRESENT IN OFFICIAL SOLUTION */
+.digit-1 {
+  transform: translateX(-50%);
+}
+
+.separator {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.dot {
+  width: var(--digit-thickness);
+  height: var(--digit-thickness);
+  background-color: #fff;
+}

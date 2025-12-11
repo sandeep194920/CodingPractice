@@ -439,3 +439,17 @@ setInterval(() => {
 - What should be the second param of setInterval here? It must be 1 - which signifies 1 millisecond. The interval must run every millisecond so don't put 1000. 1000 means the interval should run every second which is not the case (Even if we don't show ms on the screen).
 
 ---
+
+##### 46. Digital Clock
+
+- Difference between [Stop Watch Delta concept](https://github.com/sandeep194920/CodingPractice/tree/main/45-%5Bui%5D-stop-watch#why-setinterval-cannot-be-used-alone-and-need-some-kind-of-variable-to-keep-track-of-past-time) vs this question. Same applies to Anaglog clock as well as both Digital and [Analog Clock](https://www.greatfrontend.com/questions/user-interface/analog-clock?practice=practice&tab=coding) questions are similar.
+
+- Core logic of this problem with timer.
+
+- How to plan CSS for the digits.
+
+- How to get first and second numbers of a double digit number like 12 or 10 or 11 and so on?
+
+- What semantic HTML to use for the time?
+
+---
