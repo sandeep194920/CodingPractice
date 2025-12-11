@@ -422,3 +422,20 @@ const intent = formData.get("intent");
 - Learn how to format time into hours, minutes, seconds and milliseconds when input is milliseconds
 
 ---
+
+##### 45. Stop Watch
+
+- Learn to Format Time (Previous question 44 first)
+- How to divide the time in milliseconds into hours, minutes, seconds and milliseconds
+- Why `setInterval` cannot be used alone and need some kind of variable to keep track of past time.
+
+```ts
+// ❌ Naive approach (inaccurate)
+setInterval(() => {
+  setTotalDuration((duration) => duration + 1); // Just add 1ms each tick
+}, 1);
+```
+
+- What should be the second param of setInterval here? It must be 1 - which signifies 1 millisecond. The interval must run every millisecond so don't put 1000. 1000 means the interval should run every second which is not the case (Even if we don't show ms on the screen).
+
+---

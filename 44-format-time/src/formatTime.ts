@@ -38,5 +38,3 @@ export function formatTime(timeInMs: number): FormattedTime {
 const formattedTime = formatTime(3900000);
 
 console.log({ formattedTime });
-
-// 60*60*1000
