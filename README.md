@@ -453,3 +453,12 @@ setInterval(() => {
 - What semantic HTML to use for the time?
 
 ---
+
+##### 47. Analog Clock
+
+- How to get angles from hours, minutes, seconds?
+- Why do we add seconds percentage to minute calculation, and minutes percentage to hours calculation?
+- How transform origin works?
+- Why do we need to do `transform: rotate(180deg)` on the clock and rotate it upside down?
+
+---

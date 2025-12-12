@@ -1,42 +1,56 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.clock {
+  --clock-size: 40rem;
+  --clock-primary-clr: rgb(226, 175, 7);
+
+  margin: 10rem auto;
+  width: var(--clock-size);
+  aspect-ratio: 1/1; /* to keep with same as height */
+  border: 20px solid var(--clock-primary-clr);
+  background-color: black;
+  border-radius: 100%;
+  position: relative;
+  /* transform 180 deg so that hand won't point downwards */
+  transform: rotate(180deg);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.clock-mid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.4rem;
+  height: 0.4rem;
+  border: 4px solid var(--clock-primary-clr);
+  border-radius: 100%;
+  transform: translate(-50%, -50%); /*pull the point to center*/
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hand {
+  height: calc(
+    var(--clock-size) * 0.35
+  ); /*height will be overridden below for each hand*/
+  width: 0.3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: var(--clock-primary-clr);
+  transform: translateX(-50%);
+  /* transform-origin is used to place the origin at fixed position so that rotate will not move the origin point */
+  transform-origin: center top;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.hand-hour {
+  transform: rotate(90deg);
+  height: calc(var(--clock-size) * 0.3);
 }
 
-.card {
-  padding: 2em;
+.hand-minute {
+  width: 0.24rem;
+  height: calc(var(--clock-size) * 0.38);
+  transform: rotate(120deg);
 }
 
-.read-the-docs {
-  color: #888;
+.hand-second {
+  width: 0.1rem;
+  height: calc(var(--clock-size) * 0.4);
+  transform: rotate(0deg);
 }

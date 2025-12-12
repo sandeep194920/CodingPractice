@@ -1,73 +1,77 @@
-# React + TypeScript + Vite
+## [Analog Clock](https://www.greatfrontend.com/questions/user-interface/analog-clock?practice=practice&tab=coding)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+`Approx Time - 40min`
 
-Currently, two official plugins are available:
+You can learn this one first or digital clock, but I suggest to first refer readme of DigitalClock as it was built first and I have some notes there.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Things Learnt
 
-## React Compiler
+- How to get angles from hours, minutes, seconds?
+- Why do we add seconds percentage to minute calculation, and minutes percentage to hours calculation?
+- How transform origin works?
+- Why do we need to do `transform: rotate(180deg)` on the clock and rotate it upside down?
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+#### How to get angles from hours, minutes, seconds?
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Our idea is to convert, say 15 seconds to 90deg (imagine on clock where the hand will be for 15 - it will be near number 3 which is 90deg).
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+The way we can do that is,
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- How many seconds, the seconds-hand can travel? -> 60 seconds
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- We will divide current time, say 15 seconds by 60.
+
+- Then multiply the whole thing by 360 - 360 is the degrees that the seconds can rotate
+
+- So that will be `(15/60)*360` which is 90(deg). 360 is the full rotation angle here (circle)
+
+---
+
+#### Why do we add seconds percentage to minute calculation, and minutes percentage to hours calculation?
+
+**Without secondsPercentage in the minute calculation:**
+
+```ts
+const minutePercentage = minutes / 60;
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+At 12:30:00 → minute hand points to 6
+At 12:30:59 → minute hand still points to 6
+At 12:31:00 → minute hand suddenly jumps to point slightly past 6
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- This creates a "ticking" or "jumping" effect where the minute hand only updates once per minute.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+**With secondsPercentage added:**
+
+```ts
+const minutePercentage = (minutes + secondsPercentage) / 60;
 ```
+
+At 12:30:00 → minute hand points to 6
+At 12:30:30 → minute hand points halfway between 6 and 7
+At 12:30:59 → minute hand is almost at 7
+At 12:31:00 → minute hand smoothly arrives at 7
+
+This creates smooth, continuous rotation that mirrors how analog clocks actually work.
+
+The same logic applies to hour hand calculation with minutePercentage - it ensures the hour hand gradually moves as minutes pass, rather than jumping from hour to hour.
+
+---
+
+### How transform origin works?
+
+`tranform-origin: center-top` OR `top-center`
+
+`transform-origin` is used to place the origin at fixed position so that rotate will not move the origin point.
+
+---
+
+### Why do we need to do `transform: rotate(180deg)` on the clock and rotate it upside down?
+
+- When we add the hand initially it will point downwards. For the clock it should start upwards. So instead of adjusting each hand, we can just rotate the clock upside down and let our calculations be for the rotated upside.
+
+- `transform : rotate(180deg)` so that hand won't point downwards
+
+---
