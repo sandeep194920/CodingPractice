@@ -121,6 +121,30 @@ You then need to cast the return type of that array `as T`, coz you know as a de
 
 Why don't we need `as T` for default return (for primitives), because we are just returning the value we got as input so typescript has not lost track of this and will still know it is of type T.
 
+#### [TS For object definition] - What will be the type for Objects?
+
+```ts
+if (typeof val === "object" && val !== null) {
+  const clonedObject: Record<string, unknown> = {};
+
+  for (const [k, v] of Object.keys(val)) {
+    clonedObject[k] = deepClone(v);
+  }
+
+  return clonedObject as T;
+}
+```
+
+You might struggle with defining the type for an object so noting it here. Notice we do `Record<string, unknown>`. Why?
+
+- The first fact is that since the `value` given will be the JSON serializable, we won't have symbol keys. So all the keys will and should be strings in an object. Even if you define `{0: 0}`, it will become `{"0":0}`.
+
+_NOTE:_ Btw, there are only two type of keys possible in an object. Either string or a symbol. Since the value (input) is json serializable we can be sure that the key will always be a string and not a symbol.
+
+- The val of the object is unknown actually. We can't use `T` or anything to know what is the value of any key in the object. So we can just leave it as unknown and we should be fine as we cast the result back to `T` anyways.
+
+---
+
 **Summary**
 
 Why as T is fine
@@ -131,6 +155,8 @@ _Object branch_: `clonedObject as T` → TS can’t track the shape after you bu
 
 _Primitive branch_: no cast needed, TS knows the type hasn’t changed.
 
+- `Record<string, unknown>` is the type we can define for the object.
+
 ---
 
-[Reference ChatGPT notes](https://chatgpt.com/share/68cf3a5d-1328-800b-af92-537579e9ed7a)
+[Reference ChatGPT notes](https://chatgpt.com/share/693f2ff7-3948-800b-b769-7fe3eaeeaafe)

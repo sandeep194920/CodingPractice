@@ -21,8 +21,8 @@ const deepClone = <T>(val: T): T => {
   if (typeof val === "object" && val !== null) {
     const clonedObject: Record<string, unknown> = {};
 
-    for (const key of Object.keys(val)) {
-      clonedObject[key] = deepClone((val as Record<string, unknown>)[key]);
+    for (const [k, v] of Object.keys(val)) {
+      clonedObject[k] = deepClone(v);
     }
 
     return clonedObject as T;
