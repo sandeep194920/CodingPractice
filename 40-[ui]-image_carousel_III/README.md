@@ -206,6 +206,7 @@ onTransitionEnd={() => {
 - React batches state updates, which can prevent animations without RAF
 - `onTransitionEnd` event signals when CSS transition completes
 - Memory optimization: O(n) images → O(1) images in DOM
+- **Why `key` is very important on image? [Learn on my codevizual.com](http://codevizual.com/image-carousel)**
 
 #### Flow
 

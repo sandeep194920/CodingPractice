@@ -376,6 +376,8 @@ useEffect(() => {
 
 - How to optimize to have a single image and then render another image to screen + animation when "Next" or "Previous" button is clicked?
 
+- **Why `key` is very important on image? [Learn on my codevizual.com](http://codevizual.com/image-carousel)**
+
 ---
 
 ##### 41. Transfer List Logic
