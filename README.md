@@ -20,7 +20,7 @@ The goal of this repo is to:
 
 ### Index - Quick lookup on 'Things learnt' in each question
 
-##### 0. Typescript basics
+#### 0. Typescript basics
 
 - `:` vs `satisfies`
 - `type` vs `interface` - When to use what.
@@ -28,7 +28,7 @@ The goal of this repo is to:
 
 ---
 
-##### 1. Aggregate list (Transactions)
+#### 1. Aggregate list (Transactions)
 
 1. Use of `span` in "Render format: <Customer Name>: <Amount>".
 
@@ -42,7 +42,15 @@ The goal of this repo is to:
 
 ---
 
-##### 11. Modal Dialog IV
+#### 11. Modal III
+
+- `keydown` vs `keypress`. Why we need to **always use keydown**
+- How to close the modal using Escape key, and Clicking outside.
+- mousedown vs MouseUp vs Click
+
+---
+
+#### 11. Modal Dialog IV
 
 - How to focus on first element in modal-dialog when it mounts?
 
@@ -66,13 +74,13 @@ The goal of this repo is to:
 
 ---
 
-##### 12. Deep Clone
+#### 12. Deep Clone
 
 1. What are JSON serializable values
 
 ---
 
-##### 13. Deep Equal
+#### 13. Deep Equal
 
 - What is circular reference in object
 
@@ -96,7 +104,7 @@ The goal of this repo is to:
 
 ---
 
-##### 14. Difference
+#### 14. Difference
 
 - `SameValueZero`
 - Check for sparse array element
@@ -105,14 +113,14 @@ The goal of this repo is to:
 
 ---
 
-##### 16. Character frequency aggregate
+#### 16. Character frequency aggregate
 
 - Asked at IBM
 - Involves map datastructure - get from map
 
 ---
 
-##### 17. Number base conversion
+#### 17. Number base conversion
 
 - Generally asked at IBM first round
 - Decimal to binary
@@ -123,7 +131,7 @@ The goal of this repo is to:
 
 ---
 
-##### 18. Fibinocci
+#### 18. Fibinocci
 
 - Find fibinocci number through recursion
 - Find fibinocci number through loops
@@ -133,7 +141,7 @@ The goal of this repo is to:
 
 ---
 
-##### 19. Prime number or not
+#### 19. Prime number or not
 
 - Shows 3 ways to check:
   - non-optimized
@@ -142,39 +150,39 @@ The goal of this repo is to:
 
 ---
 
-##### 20. HCF/GCD and LCM (You have to remember the formula)
+#### 20. HCF/GCD and LCM (You have to remember the formula)
 
 - You need to _remember_ the Euclidian alogorithm so it will always be fresh in mind
 - What is LCM and how's LCM related to GCD?
 
 ---
 
-##### 21. Reverse a number - Also check for palindrome easily
+#### 21. Reverse a number - Also check for palindrome easily
 
 - See how to mathematically reverse a number, not converting into a string
 - You can then check by comparing the number and reversed to see if they are same to conclude if it is palindrome
 
 ---
 
-##### 22. Missing words
+#### 22. Missing words
 
 - Asked in IBM
 - Look at the [Missing words readme](https://github.com/sandeep194920/CodingPractice/tree/main/22-%5Bstring%5D-missing-words) to understand the way to approach manually first. _This is the key to solving any problem_
 
 ---
 
-##### 23. Find duplicates in the array
+#### 23. Find duplicates in the array
 
 - Right way to sort an array - `sort` mutates the array by sorting in-place. Hence, copying it before sorting is the best approach
 - _3 ways_ to find duplicates in the array
 
 ---
 
-##### 23. Find missing number in an array sequence
+#### 23. Find missing number in an array sequence
 
 ---
 
-##### 24. File Explorer
+#### 24. File Explorer
 
 **File Explorer I**
 
@@ -184,28 +192,28 @@ The goal of this repo is to:
 
 ---
 
-##### 27. Data Table I
+#### 27. Data Table I
 
 - `border-collapse:collapse` prop on table to get rid of double border
 - `flex` vs `inline-flex`
 
 ---
 
-##### 28. Data Table II
+#### 28. Data Table II
 
 - Sort table data in ascending and descending orders
 - Why we do `localCompare` to sort strings and not `>` or `<`
 
 ---
 
-##### 29. Data Table III
+#### 29. Data Table III
 
 - Avoid using `FC` with generics `T`
 - `keyof T & string`
 
 ---
 
-##### 30. TODO List
+#### 30. TODO List
 
 - How to create unique `key` for a list? How to also make it secure?
 - How to submit on enter? This is basically by wrapping `input` and submit `button` inside the `form` to get this behaviour?
@@ -215,7 +223,7 @@ The goal of this repo is to:
 
 ---
 
-##### 31. Sort elements by frequency
+#### 31. Sort elements by frequency
 
 - Bucket sort
 - Sort - `sort()` doesn't work on numbers. We need to do `sort(a,b => a-b)`
@@ -241,7 +249,7 @@ The goal of this repo is to:
 
 ---
 
-##### 32. Job Board
+#### 32. Job Board
 
 - Why GreatFrontEnd solution is not perfect here?
 
@@ -255,14 +263,14 @@ The goal of this repo is to:
 
 ---
 
-##### 33. Traffic Light
+#### 33. Traffic Light
 
 - State machine
 - SetTimeout and cleanup function inside useEffect
 
 ---
 
-##### 34. Tic-Tac-Toe Winner logic
+#### 34. Tic-Tac-Toe Winner logic
 
 - How to write winner logic for a 3x3 fixed board using 1D array
 - How to use a matrix (2D array) for NxN board
@@ -272,7 +280,7 @@ The goal of this repo is to:
 
 ---
 
-##### 37. Connect four
+#### 37. Connect four
 
 - Steps to do this game - How to divide the game (Where to start)?
 
@@ -287,7 +295,7 @@ The goal of this repo is to:
 
 ---
 
-##### 38. Image Carousel
+#### 38. Image Carousel
 
 - When to do `align-items:center` vs `left:50%; transform:translate(-50%)`? -> The later one is done for absolutely positioned elements.
 
@@ -301,7 +309,7 @@ add`(prev - or + 1 totalImages)  % totalImages`;
 
 ---
 
-##### 39. Image Carousel 2 (smooth transition from one image to next)
+#### 39. Image Carousel 2 (smooth transition from one image to next)
 
 - How to continue from image carousel 1.
 - How to translateX (move) images with **animation** (**transition**).
@@ -370,7 +378,7 @@ useEffect(() => {
 
 ---
 
-##### 40. Image Carousel 3 (Performance optimization)
+#### 40. Image Carousel 3 (Performance optimization)
 
 - What is `requestAnimationFrame` - How it works? Especially at which point the Browser paints?
 
@@ -380,7 +388,7 @@ useEffect(() => {
 
 ---
 
-##### 41. Transfer List Logic
+#### 41. Transfer List Logic
 
 - Use a map if you want to delete items from the list **_(This is very important to remember for you to decide when to use Map Vs Array)_**.
 - Use an array if you don't modify the list
@@ -390,7 +398,7 @@ useEffect(() => {
 
 ---
 
-##### 42. Transfer List
+#### 42. Transfer List
 
 - `map.entries()` is very much same as doing `map itself`
 - If you see this pattern where a component has checkbox + label, it's better to make it a component because we need to use `useId()` to get the unique Id. This will be a clean approach.
@@ -398,7 +406,7 @@ useEffect(() => {
 
 ---
 
-##### 43. Users Database
+#### 43. Users Database
 
 - Select option
 - Multiple buttons for form submissions - button `name` and `value` prop pair usage.
@@ -419,13 +427,13 @@ const intent = formData.get("intent");
 
 ---
 
-##### 44. Format Time
+#### 44. Format Time
 
 - Learn how to format time into hours, minutes, seconds and milliseconds when input is milliseconds
 
 ---
 
-##### 45. Stop Watch
+#### 45. Stop Watch
 
 - Learn to Format Time (Previous question 44 first)
 - How to divide the time in milliseconds into hours, minutes, seconds and milliseconds
@@ -442,7 +450,7 @@ setInterval(() => {
 
 ---
 
-##### 46. Digital Clock
+#### 46. Digital Clock
 
 - Difference between [Stop Watch Delta concept](https://github.com/sandeep194920/CodingPractice/tree/main/45-%5Bui%5D-stop-watch#why-setinterval-cannot-be-used-alone-and-need-some-kind-of-variable-to-keep-track-of-past-time) vs this question. Same applies to Anaglog clock as well as both Digital and [Analog Clock](https://www.greatfrontend.com/questions/user-interface/analog-clock?practice=practice&tab=coding) questions are similar.
 
@@ -456,7 +464,7 @@ setInterval(() => {
 
 ---
 
-##### 47. Analog Clock
+#### 47. Analog Clock
 
 - How to get angles from hours, minutes, seconds?
 - Why do we add seconds percentage to minute calculation, and minutes percentage to hours calculation?

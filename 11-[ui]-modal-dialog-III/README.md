@@ -6,6 +6,7 @@
 
 ### Things learned
 
+- `keydown` vs `keypress`. Why we need to **always use keydown**
 - How to close the modal.
 - mousedown vs MouseUp vs Click
 
@@ -16,7 +17,17 @@ There are two new interactions to support for closing the dialog: (1) Hitting th
 
 To close the dialog, we simply have to call the onClose callback, so it's a matter of when to trigger that callback.
 
-##### 1. Hitting the Escape key
+---
+
+#### 1. `keydown` vs `keypress`. Why we need to **always use keydown**
+
+`keydown` - Fires when any key is pressed (Keys including the ones that gives output like 'Q', 'W', 'E', 1,2,3,4.... AND keys including the ones that don't give the output like `ctrl` + `shift` and so on).
+
+`keypress` - Fires when key is pressed that gives output. It doesn't fire for one that don't give output like `ctrl` + `shift` and so on. Also, this is deprecated, so we always need to use only `keydown`.
+
+---
+
+#### 2. Hitting the Escape key
 
 We create a generic hook called `useOnKeyDown` that takes in a string key representing the keyboard key to respond to, and a callback to trigger when the key is pressed.
 
@@ -45,7 +56,7 @@ I initially thought we might not need useEffect, and just need `document.addEven
 
 ---
 
-##### 2. Clicking outside the dialog contents
+#### 3. Clicking outside the dialog contents
 
 The tricky part of implementing this logic is to determine whether the click happened inside or outside the dialog contents body.
 
