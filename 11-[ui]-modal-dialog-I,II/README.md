@@ -33,6 +33,8 @@ So:
 
 - react portal (from react-dom)
 
+- `position:fixed` vs `position:absolute`
+
 - hidden attibute on HTML element like `<Section hidden={true}/>` is related to CSS `display` prop on that element. It would only work if display is block and not flex. (See more in details)
 
 We learnt about the hidden attribute in [Accordion question](https://github.com/sandeep194920/CodingPractice/tree/main/08-%5Bui%5D-accordion#2-good-accordion)
@@ -51,6 +53,16 @@ We learnt about the hidden attribute in [Accordion question](https://github.com/
 ### Details
 
 #### Modal I learnings
+
+##### 0. `position:fixed` vs `position:absolute`
+
+For modal backdrop it is better to choose **`positon:fixed`**.
+
+The main difference is that `position: fixed` places an element relative to the browser viewport (meaning it stays in the same spot when the page scrolls), while `position: absolute` places an element relative to its closest positioned ancestor (and moves with the page if that ancestor scrolls).
+
+We dont want scroll to happen and also fixed is always relative to browser's view port which is what we need.
+
+---
 
 **1. Hidden attibute on HTML element like `<Section hidden={true}/>` is related to CSS `display` prop on that element**
 

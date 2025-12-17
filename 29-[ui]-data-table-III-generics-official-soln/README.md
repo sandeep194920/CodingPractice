@@ -2,7 +2,7 @@
 
 `Approx time - 20m`
 
-This is from the official solution but mostly similar to my solution `29-[ui]-data-table-III-generics`. The difference is mostly the `sort` functionality will come as prop itself where the comparator function is tied to the column itself - which is a good practice. So the demo that part I decided to make it a separate question - so we can practice the best practices in more isolated way.
+This is from the official solution but mostly similar to my solution `29-[ui]-data-table-III-generics`. The difference is mostly the `sort` functionality will come as prop itself where the comparator function is tied to the column itself - which is a good practice. So to demo that part I decided to make it a separate question - so we can practice the best practices in more isolated way.
 
 The main thing is `renderCell` that needs practice here.
 

@@ -42,6 +42,31 @@ The goal of this repo is to:
 
 ---
 
+#### 11. Modal I
+
+- react portal (from react-dom)
+
+- `position:fixed` vs `position:absolute`
+
+- hidden attibute on HTML element like `<Section hidden={true}/>` is related to CSS `display` prop on that element. It would only work if display is block and not flex. (See more in details)
+
+We learnt about the hidden attribute in [Accordion question](https://github.com/sandeep194920/CodingPractice/tree/main/08-%5Bui%5D-accordion#2-good-accordion)
+
+- How to prevent closing the dialog onClick on anywhere inside the dialog (except close button)? We can use `onClick={(e) => e.stopPropagation()}` inside the dialog that prevents event bubbling.
+  - This is necessary because the backdrop also has onClick close, and dialog also has the close button. When dialog's close button is clicked, it propogates upto the backdrop allowing it to close the modal when we click anything inside the backdrop. This happens due to event bubbling, and we can prevent it by adding `onClick={(e) => e.stopPropagation()}` inside the dialog.
+
+---
+
+#### 11. Modal II
+
+- aria-modal
+
+- use `useId` for any kind of id for HTML elements, like aria-labelledby and so on as we learnt in Accordion question.
+
+- aria-describedby (see below explanation)
+
+---
+
 #### 11. Modal III
 
 - `keydown` vs `keypress`. Why we need to **always use keydown**

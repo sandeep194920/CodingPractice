@@ -19,6 +19,8 @@ We already implemented Escape key to close the modal. In this question, we will 
 }
 ```
 
+**_Note: The `outline` property is added here as the `border` is not possible here - border cannot work like outline for focus because borders are part of the element’s box model, while outlines are not._**
+
 **Focus first element**
 
 - When a dialog opens, focus moves to the first element inside the dialog
