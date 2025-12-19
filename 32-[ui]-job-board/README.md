@@ -8,7 +8,7 @@
 
 - How to properly handle duplicate results caused by react strict mode? Why the duplicates are caused even after updating the state conditionally by checking if `isMounted.current === true`?
 
-- What is isMounted and why we need to use that?
+- What is isMounted and why we need to use that? [Strongly recommend reading this claude chat first to know the flow](https://claude.ai/share/c01447f3-dce9-4259-a62c-641cd60276d3). This is when I was revising this problem second time. So I exactly spotted the error.
 
 ---
 

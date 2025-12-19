@@ -280,7 +280,7 @@ We learnt about the hidden attribute in [Accordion question](https://github.com/
 
 - How to call APIs, and also use a ref to check if component exists before updating the state
 
-- What is `isMounted` and why we need to use that?
+- What is `isMounted` and why we need to use that? [Strongly recommend reading this claude chat first to know the flow](https://claude.ai/share/c01447f3-dce9-4259-a62c-641cd60276d3)
 
 - React Strict mode. Why `setState(normal array)` is **NOT** better than an updater function like `setState(prev => ...)` (Greatfrontend does `setState(normal array)` which is not good)?
 
