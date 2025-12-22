@@ -497,3 +497,9 @@ setInterval(() => {
 - Why do we need to do `transform: rotate(180deg)` on the clock and rotate it upside down?
 
 ---
+
+#### 49. Flatten array
+
+- How recursion works. **Very important!**
+
+---
