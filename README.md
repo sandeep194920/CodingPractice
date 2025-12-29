@@ -501,5 +501,6 @@ setInterval(() => {
 #### 49. Flatten array
 
 - How recursion works. **Very important!**
+- classNames problem (51) is same as this, so do that next.
 
 ---
