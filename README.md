@@ -504,3 +504,9 @@ setInterval(() => {
 - classNames problem (51) is same as this, so do that next.
 
 ---
+
+#### 52. Data Merging
+
+- Whenever a question says, 'The order should be maintained', probably we need to use a `Map`.
+
+---
